@@ -1,14 +1,24 @@
 1 - Clonar el repositorio "Training Git" --> git clone https://github.com/juanlopezcortijos/Training-Git.git
+
 2 - Comprobar qué archivos hay y cual ha sido el último commit realizado. --> git log
-3 - Crear una nueva rama llamada "Nueva-Rama-{Insertar aquí tu nombre}" (Ejemplo: "Nueva-Rama-Juan") --> git checkout -b "Nueva-Rama-Juan"
+
+3 - Crear una nueva rama llamada "Nueva-Rama-{Insertar aquí tu nombre}" (Ejemplo: "Nueva-Rama-Juan") --> git checkout -b "Nueva-Rama-Juan", y luego git push
+
 4 - Crear un archivo a.txt y hacer un nuevo commit de esa modificación 
-    con mensaje "Archivo AAA.txt creado y modificado por {Insertar nombre}" --> git add para añadir tu archivo y luego git commit -m "Archivo AAA.txt creado y modificado por Juan"
-(Nota:)
+    con mensaje "Archivo AAA.txt creado y modificado por {Insertar nombre}" --> git add para añadir tu archivo y luego git commit -m "Archivo AAA.txt creado y modificado por Juan", y luego git push
+
 5 - Crear un archivo b.txt y hacer un nuevo commit de esa modificación 
-    con mensaje "Archivo BBB.txt creado y modificado por {Insertar nombre}" --> git add para añadir tu archivo y luego git commit -m "Archivo BBB.txt creado y modificado por Juan"
-6 - Hacer RESET SOFT del último commit realizado y comprobar qué ha ocurrido. --> git reset --soft HEAD^1
-7 - Verás que tras hacer reset soft, se ha eliminado el útimo commit creado pero no se borran el archivo BBB.txt
-8 - Volver a commitear la modificación en BBB.txt con el mismo mensaje de antes. --> git add para añadir tu archivo y luego git commit -m "Archivo BBB.txt creado y modificado por Juan"
-9 - Hacer RESET SOFT del último commit realizado y comprobar qué ha ocurrido. --> git reset --soft HEAD^1
+    con mensaje "Archivo BBB.txt creado y modificado por {Insertar nombre}" --> git add para añadir tu archivo y luego git commit -m "Archivo BBB.txt creado y modificado por Juan", y luego git push
+
+6 - Hacer RESET SOFT del último commit realizado y comprobar qué ha ocurrido. --> git reset --soft HEAD^1 y luego git push
+
+    (Verás que tras hacer reset soft, se ha eliminado el útimo commit creado pero no se borran el archivo BBB.txt)
+
+8 - Volver a commitear la modificación en BBB.txt con el mismo mensaje de antes. --> git add para añadir tu archivo y luego git commit -m "Archivo BBB.txt creado y modificado por Juan", y luego git push
+
+9 - Hacer RESET HARD del último commit realizado y comprobar qué ha ocurrido. Pushear cambios. --> git reset --soft HEAD^1, y luego git push
+
+10 - Modificar el archivo AAA.txt escribiendo cosas o cambiando cosas dentro. Aparecerá AAA.txt en rojo en el bash. 
+     A continuación, escribir en git "git checkout AAA.txt" y comprobar qué ocurre. 
 
 (NOTA IMPORTANTE: Tras cada commit/reset hard/reset soft hacer push!!! o te saldran conflictos.)
